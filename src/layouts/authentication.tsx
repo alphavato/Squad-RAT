@@ -12,10 +12,18 @@
 // Follow me on:
 //  Github : https://github.com/alphavato
 */
+import "@/styles/global.scss";
+import "@/styles/layouts/authentication.scss";
+
+import MetaTags from "@/components/core/MetaTag";
+
 export default function AuthenticationLayout({children}: { children: React.ReactNode }) {
   return (
     <>
-      <h1>{children}</h1>
+      <MetaTags title="Authentication layout"/>
+      <div className="auth-container">
+        {children}
+      </div>
     </>
   )
 }
