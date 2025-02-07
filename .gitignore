@@ -4,6 +4,9 @@
 .code
 .vscode
 
+# Application Design
+.design/**/*.vpp.*
+
 # dependencies
 /node_modules
 /.pnp

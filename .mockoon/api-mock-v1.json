@@ -1,0 +1,114 @@
+{
+  "uuid": "073425f1-40a3-4634-a36a-d758566dbf70",
+  "lastMigration": 33,
+  "name": "Squad Control Panel",
+  "endpointPrefix": "api",
+  "latency": 0,
+  "port": 8001,
+  "hostname": "",
+  "folders": [
+    {
+      "uuid": "86279ca9-ff3e-4068-8490-c4feeed59e3a",
+      "name": "Authentication",
+      "children": [
+        {
+          "type": "route",
+          "uuid": "0b7481a3-d895-4387-9af8-526dfcadc58e"
+        }
+      ]
+    },
+    {
+      "uuid": "c272ba14-c00b-48dc-a4e4-949345557d68",
+      "name": "New folder",
+      "children": []
+    }
+  ],
+  "routes": [
+    {
+      "uuid": "0b7481a3-d895-4387-9af8-526dfcadc58e",
+      "type": "http",
+      "documentation": "Login",
+      "method": "post",
+      "endpoint": "auth/login",
+      "responses": [
+        {
+          "uuid": "24029578-abeb-46ef-b7d2-e3aac9715951",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "folder",
+      "uuid": "86279ca9-ff3e-4068-8490-c4feeed59e3a"
+    },
+    {
+      "type": "folder",
+      "uuid": "c272ba14-c00b-48dc-a4e4-949345557d68"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [],
+  "callbacks": []
+}

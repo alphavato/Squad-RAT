@@ -1,11 +1,12 @@
 @import "./../vars";
+@import "./../color-palette";
 
 body {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: #282828;
+  background: $background_color;
 }
 
 #root {
@@ -14,8 +15,14 @@ body {
 }
 
 .auth-container {
-  color: #000;
+  color: $primary_text;
   margin: 0 auto;
+  padding: 2rem 1.5rem;
+  border-radius: 0.5rem;
+  background: $container;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+
   @media (min-width: $mobile_s) {
     width: 290px;
   }
@@ -28,10 +35,6 @@ body {
   @media (min-width: $tablet) {
     width: 410px;
   }
-  padding: 2rem 1.5rem;
-  border-radius: 0.5rem;
-  background: #fff;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 
   .form-title {
     text-align: center;
@@ -43,8 +46,6 @@ body {
   .login-form {
     .input-wrapper {
       height: 54px;
-
-
       width: 100%;
       position: relative;
       margin-bottom: 1.5rem;
@@ -55,19 +56,21 @@ body {
         outline: none;
         font-size: 1.06rem;
         border-radius: 0.31rem;
-        border: 1px solid #bfb3f2;
-        padding: 0px 1.25rem 0 3.12rem;
+        border: 1px solid $border;
+        padding: 0 1.25rem 0 3.12rem;
         transition: 0.2s ease;
+        background: $card;
+        border: $input_border;
 
-        &:focus {
-          border-color: #5f41e4;
+        :focus {
+          border-color:$primary;
         }
 
-        &::placeholder {
-          color: #9284c8;
+        ::placeholder {
+          color: $muted_text;
         }
 
-        &:valid ~ .eye-icon {
+        :valid ~ .eye-icon {
           display: flex;
         }
       }
@@ -77,12 +80,12 @@ body {
         top: 50%;
         height: 100%;
         display: flex;
-        color: #a395e0;
+        color: $border;
         align-items: center;
         transform: translateY(-50%);
         transition: 0.2s ease;
 
-        &:not(.eye-icon) {
+        :not(.eye-icon) {
           left: 0.93rem;
           pointer-events: none;
         }
@@ -101,7 +104,7 @@ body {
       font-weight: 500;
       text-decoration: none;
 
-      &:hover {
+      :hover {
         text-decoration: underline;
       }
     }
@@ -117,10 +120,10 @@ body {
       cursor: pointer;
       margin-top: 2.19rem;
       border-radius: 0.31rem;
-      background: #5f41e4;
+      background: $primary_click;
       transition: 0.3s ease;
 
-      &:hover {
+      :hover {
         background: #4320df;
       }
     }
